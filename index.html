@@ -4,9 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password matching</title>
+    <title>Password matching</title> 
+    
 </head>
 <body>
-    <input type="password">
+    <h1>Log In</h1>
+    <form>
+        <input type="email" placeholder="Email"><br> <br>
+        <input id="password" type="password" placeholder="Password"><br> <br>
+        <input id="confirm-password" type="password" placeholder="Confirm Password"><br> <br>
+        <button id="btn" disabled>Log In</button>
+    </form>
+    <script>
+        const getPassword1 =document.getElementById('password');
+        const getPassword2 =document.getElementById('confirm-password')       
+        function passMatch(pass1, pass2) {
+            if (pass1.value === pass2.value) {
+                document.getElementById('btn').removeAttribute('disabled');
+
+            }else(
+                document.getElementById('btn').setAttribute('disabled', true)
+            )
+        }
+
+
+    </script>
 </body>
 </html>
